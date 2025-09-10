@@ -22,6 +22,6 @@ add_more_features AS (
 		END) AS season
     FROM add_features
 )
-SELECT to_char(date, 'Month')
+SELECT *
 FROM add_more_features
 ORDER BY date
