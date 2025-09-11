@@ -1,6 +1,3 @@
-SELECT * FROM prep_flights;
-
-
 /*
 unique number of departures connections
 
