@@ -1,5 +1,3 @@
-SELECT *
-FROM prep_weather_daily;
 
 SELECT CW 	
 		, avg(avg_temp_c) AS avg_temperature
