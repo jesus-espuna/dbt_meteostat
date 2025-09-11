@@ -71,11 +71,3 @@ SELECT ts.*
 FROM total_stats AS ts
 JOIN {{ref('prep_weather_daily')}} AS wd
 ON ts.airport_code = wd.airport_code
-
-
-/*
-SELECT a.FAA AS airports_with_weather
-FROM prep_airports AS a
-inner JOIN prep_weather_daily AS wd
-ON a.faa = wd.airport_code;
-*/
