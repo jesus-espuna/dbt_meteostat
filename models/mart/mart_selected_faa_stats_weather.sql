@@ -30,7 +30,7 @@ WITH departures AS (
 							, sum(diverted) AS dep_diverted
 							, count(dep_time) AS dep_n_flights
 					FROM {{ref('prep_flights')}} AS d
-					INNER JOIN prep_weather_daily AS wd
+					INNER JOIN {{ref('prep_weather_daily')}} AS wd
 					ON d.origin = wd.airport_code
 					GROUP BY origin
 							, dep_date
