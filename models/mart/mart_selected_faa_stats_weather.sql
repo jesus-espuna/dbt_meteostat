@@ -43,7 +43,7 @@ arrivals AS (
 					, sum(diverted) AS arr_diverted
 					, count(arr_time) AS arr_n_flights
 			FROM {{ref('prep_flights')}} AS a
-			INNER JOIN prep_weather_daily AS wd
+			INNER JOIN {{ref('prep_weather_daily')}} AS wd
 			ON a.dest = wd.airport_code
 			GROUP BY dest
 ),
