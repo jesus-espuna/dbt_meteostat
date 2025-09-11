@@ -57,6 +57,6 @@ total_stats AS (
 SELECT a.city, a.country, a.name, 
 		ts.*
 FROM total_stats as ts
-JOIN {{ref('PREP_AIRPORTS')}} AS a
+JOIN {{ref('prep_airports')}} AS a
 ON ts.airport_code = a.faa
 				
